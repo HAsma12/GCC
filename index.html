@@ -3,168 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation DevOps</title>
+    <title>Formation Web et Développement</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
-
-    <!-- Section Hero -->
-    <section class="text-center py-32 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-        <h1 class="text-5xl font-bold animate-pulse">Maîtrisez DevOps en quelques semaines</h1>
-        <p class="mt-4 text-lg">Une formation complète pour comprendre CI/CD, Docker, Kubernetes et plus encore.</p>
-        <a href="#inscription" class="mt-6 inline-block bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all">S'inscrire maintenant</a>
-    </section>
-    
-    <!-- Section À propos -->
-    <section id="about" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
-        <h2 class="text-3xl font-bold mb-4">Pourquoi suivre cette formation ?</h2>
-        <p class="text-gray-700">DevOps est une compétence clé dans le développement moderne. Apprenez les outils et méthodologies les plus demandés.</p>
-    </section>
-    
-    <!-- Programme du cours avec images des outils -->
-    <section id="programme" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
-        <h2 class="text-3xl font-bold mb-6 text-center">Programme de la formation</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-6 bg-blue-500 text-white rounded-lg shadow-xl hover:bg-blue-600 transform transition-all hover:scale-105">
-                <h3 class="text-2xl font-semibold">Introduction à DevOps</h3>
-                <button class="mt-4 px-6 py-3 bg-white text-blue-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('intro')">Voir les détails</button>
-                <p id="intro" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Apprenez les bases du DevOps et ses avantages dans le développement moderne.</p>
-            </div>
-            <div class="p-6 bg-green-500 text-white rounded-lg shadow-xl hover:bg-green-600 transform transition-all hover:scale-105">
-                <h3 class="text-2xl font-semibold">Gestion du code source avec Git</h3>
-                <button class="mt-4 px-6 py-3 bg-white text-green-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('git')">Voir les détails</button>
-                <p id="git" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Maîtrisez l'utilisation de Git pour gérer et versionner le code source.</p>
-            </div>
-            <div class="p-6 bg-orange-500 text-white rounded-lg shadow-xl hover:bg-orange-600 transform transition-all hover:scale-105">
-                <h3 class="text-2xl font-semibold">Intégration et Déploiement Continu avec Jenkins</h3>
-                <button class="mt-4 px-6 py-3 bg-white text-orange-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('jenkins')">Voir les détails</button>
-                <p id="jenkins" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Utilisez Jenkins pour l'intégration continue et le déploiement automatique des applications.</p>
-            </div>
-            <div class="p-6 bg-purple-500 text-white rounded-lg shadow-xl hover:bg-purple-600 transform transition-all hover:scale-105">
-                <h3 class="text-2xl font-semibold">Conteneurisation avec Docker</h3>
-                <button class="mt-4 px-6 py-3 bg-white text-purple-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('docker')">Voir les détails</button>
-                <p id="docker" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Comprenez comment Docker simplifie la gestion des applications et leur déploiement.</p>
-            </div>
-            <div class="p-6 bg-blue-700 text-white rounded-lg shadow-xl hover:bg-blue-800 transform transition-all hover:scale-105">
-                <h3 class="text-2xl font-semibold">Orchestration avec Kubernetes</h3>
-                <button class="mt-4 px-6 py-3 bg-white text-blue-700 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('kubernetes')">Voir les détails</button>
-                <p id="kubernetes" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Explorez Kubernetes pour automatiser la gestion des conteneurs dans des environnements complexes.</p>
-            </div>
-        </div>
-    </section>
-    
-    <script>
-        function showDetails(id) {
-            const text = document.getElementById(id);
-            if (text.classList.contains('opacity-0')) {
-                text.classList.remove('opacity-0');
-                text.classList.add('opacity-100');
-            } else {
-                text.classList.remove('opacity-100');
-                text.classList.add('opacity-0');
-            }
-        }
-    </script>
-
-
-    
-    
-    <!-- Témoignages -->
-    <section id="temoignages" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
-        <h2 class="text-3xl font-bold mb-4">Témoignages</h2>
-        <div class="bg-gray-100 p-4 rounded-lg shadow">
-            <p class="italic text-gray-700">"Une formation complète qui m'a permis de réussir dans mon nouveau job en DevOps !" - <strong>Alex B.</strong></p>
-        </div>
-    </section>
-    <section id="faq" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold mb-6 text-center">Questions fréquemment posées</h2>
-    
-        <div class="space-y-4">
-            <!-- Question 1 -->
-            <div class="border-b pb-4">
-                <button onclick="toggleAnswer('q1')" class="w-full text-left flex items-center justify-between text-xl font-semibold text-blue-600 border-l-4 pl-4">
-                    <span>Qu'est-ce que le DevOps ?</span>
-                    <span id="q1-symbol" class="text-2xl">+</span>
-                </button>
-                <p id="q1" class="text-gray-700 mt-2 opacity-0 transition-opacity duration-500">DevOps est une méthodologie qui combine développement logiciel et gestion des opérations pour accélérer la livraison et la mise en production d'applications.</p>
-            </div>
-    
-            <!-- Question 2 -->
-            <div class="border-b pb-4">
-                <button onclick="toggleAnswer('q2')" class="w-full text-left flex items-center justify-between text-xl font-semibold text-blue-600 border-l-4 pl-4">
-                    <span>Pourquoi utiliser Jenkins ?</span>
-                    <span id="q2-symbol" class="text-2xl">+</span>
-                </button>
-                <p id="q2" class="text-gray-700 mt-2 opacity-0 transition-opacity duration-500">Jenkins est utilisé pour l'intégration continue et le déploiement automatique, ce qui facilite la gestion du code source et des tests automatisés.</p>
-            </div>
-    
-            <!-- Question 3 -->
-            <div class="border-b pb-4">
-                <button onclick="toggleAnswer('q3')" class="w-full text-left flex items-center justify-between text-xl font-semibold text-blue-600 border-l-4 pl-4">
-                    <span>Qu'est-ce que Kubernetes ?</span>
-                    <span id="q3-symbol" class="text-2xl">+</span>
-                </button>
-                <p id="q3" class="text-gray-700 mt-2 opacity-0 transition-opacity duration-500">Kubernetes est un outil d'orchestration des conteneurs qui permet de gérer, déployer et mettre à l'échelle les applications conteneurisées.</p>
-            </div>
-        </div>
-    </section>
-    
-    <script>
-        function toggleAnswer(id) {
-            const answer = document.getElementById(id);
-            const symbol = document.getElementById(id + '-symbol');
-            
-            if (answer.classList.contains('opacity-0')) {
-                answer.classList.remove('opacity-0');
-                answer.classList.add('opacity-100');
-                symbol.innerHTML = '-';  // Changer le signe "+" en "-"
-            } else {
-                answer.classList.remove('opacity-100');
-                answer.classList.add('opacity-0');
-                symbol.innerHTML = '+';  // Réinitialiser à "+"
-            }
-        }
-    </script>
-    
-    
-    
-    <!-- Formulaire d'inscription -->
-    <section id="inscription" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
-        <h2 class="text-3xl font-bold mb-4">Inscrivez-vous maintenant</h2>
-        <form class="space-y-4">
-            <input type="text" placeholder="Votre nom" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
-            <input type="email" placeholder="Votre email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
-            <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-all">S'inscrire</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-blue-600 text-white p-6">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <!-- Texte animé -->
-            <div class="text-center opacity-0 animate-fadeIn duration-1000 delay-300">
-                <p class="text-3xl font-bold">
-                    <span class="text-gray-400">G2C</span>
-                </p>
-                <p class="text-xl font-bold">
-                    <span class="text-blue-400">Coaching & Consulting</span>
-                </p>
-            </div>
-    
-            <!-- Contact Info -->
-            <div class="text-center opacity-0 animate-fadeIn duration-1000 delay-500">
-                <p class="font-semibold">Contactez-nous</p>
-                <p>Téléphone : +216 123 456 789</p>
-                <p>Email : contact@formationdevops.com</p>
-                <p>Adresse : 123 Rue de la Technologie, Tunis, Tunisie</p>
-            </div>
-        </div>
-    
-        <div class="text-center mt-4 opacity-0 animate-fadeIn duration-1000 delay-700">
-            <p>© 2024 Formation DevOps - Tous droits réservés</p>
-        </div>
-    </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <style>
         @keyframes fadeIn {
             from {
@@ -174,11 +16,264 @@
                 opacity: 1;
             }
         }
-    
+
         .animate-fadeIn {
             animation: fadeIn 1s ease-out forwards;
         }
-    </style>    
 
+        .animate-scaleIn {
+            animation: scaleIn 0.5s ease-out forwards;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .accordion-button {
+            cursor: pointer;
+            text-align: left;
+            background-color: #fff;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-button:focus {
+            outline: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+        /* Animation de l'accordion */
+        .accordion-content {
+            display: none; /* Masquer le contenu au départ */
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+
+        .accordion-content.open {
+            display: block;
+            max-height: 500px; /* Adapté à la hauteur du contenu */
+            padding: 1rem; /* Espace entre la question et la réponse */
+        }
+
+        .accordion-button {
+            cursor: pointer;
+            text-align: left;
+            background-color: #fff;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .accordion-button:focus {
+            outline: none;
+        }
+ 
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-24 text-center">
+        <h1 class="text-5xl font-bold leading-tight animate-fadeIn">Devenez un Développeur Exceptionnel !</h1>
+        <p class="text-xl mt-6 animate-fadeIn">Maîtrisez les langages de programmation clés et les frameworks modernes pour créer des applications web robustes et innovantes. Accédez à une carrière de développeur de haut niveau.</p>
+        <a href="#inscription" class="inline-block bg-blue-700 text-white py-3 px-8 rounded-full text-lg mt-8 hover:bg-blue-800 transition duration-300 transform hover:scale-105 animate-scaleIn">Commencez votre parcours</a>
+    </header>
+
+    <!-- Programme du cours -->
+    <section class="bg-gray-50 py-16" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Programme de Formation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-600 text-white p-8 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+                    <h3 class="text-2xl font-semibold">Développement web</h3>
+                    <p>Découvrez les bases du développement front-end avec HTML et CSS, et créez des sites dynamiques et interactifs avec JavaScript et PHP 8. Ensuite, plongez dans Symfony 6 pour des applications robustes.</p>
+                </div>
+                <div class="bg-green-600 text-white p-8 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+                    <h3 class="text-2xl font-semibold">Java Orienté Objet</h3>
+                    <p>[Expliquez les objectifs et les modules de la formation Joo après ici.]</p>
+                </div>
+                <div class="bg-orange-600 text-white p-8 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+                    <h3 class="text-2xl font-semibold">JEE</h3>
+                    <p>Apprenez à développer des applications d'entreprise avec Java EE, en utilisant des outils comme Spring, Hibernate et d'autres technologies JEE pour créer des solutions d'entreprise modernes.</p>
+                </div>
+                <div class="bg-teal-600 text-white p-8 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+                    <h3 class="text-2xl font-semibold">Spring Boot et Angular</h3>
+                    <p>Devenez un expert en développement Full Stack en utilisant Spring Boot pour le back-end et Angular pour le front-end, pour créer des applications web dynamiques et performantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="py-16 bg-blue-50" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Ce Qu'en Disent Nos Étudiants</h2>
+            <div class="flex justify-center space-x-8">
+                <div class="bg-white shadow-xl rounded-lg p-6 max-w-sm">
+                    <p class="text-gray-600 italic">"Une formation vraiment complète, qui m'a permis de décrocher mon premier job en développement !" - <strong>Alice T.</strong></p>
+                </div>
+                <div class="bg-white shadow-xl rounded-lg p-6 max-w-sm">
+                    <p class="text-gray-600 italic">"L'approche pratique et les projets réels m'ont aidé à perfectionner mes compétences." - <strong>Rami M.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- FAQ Section -->
+   <section class="bg-blue-50 py-16" id="faq">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Questions Fréquemment Posées</h2>
+        <div class="space-y-4">
+            <div class="bg-white shadow-xl rounded-lg">
+                <button class="accordion-button p-6 w-full text-left">
+                    Quelle est la durée de la formation ?
+                </button>
+                <div class="accordion-content p-6">
+                    <p>La formation dure généralement 6 mois, avec des sessions intensives et un apprentissage basé sur des projets pratiques.</p>
+                </div>
+            </div>
+            <div class="bg-white shadow-xl rounded-lg">
+                <button class="accordion-button p-6 w-full text-left">
+                    Faut-il avoir des connaissances préalables pour suivre la formation ?
+                </button>
+                <div class="accordion-content p-6">
+                    <p>Il est recommandé d'avoir des bases en informatique, mais la formation est conçue pour s'adapter à tous les niveaux. Nous couvrons les bases nécessaires pour chaque module.</p>
+                </div>
+            </div>
+            <div class="bg-white shadow-xl rounded-lg">
+                <button class="accordion-button p-6 w-full text-left">
+                    La formation est-elle en ligne ?
+                </button>
+                <div class="accordion-content p-6">
+                    <p>Oui, notre formation est entièrement en ligne, ce qui vous permet d'apprendre à votre rythme et de suivre des cours vidéo, des exercices et des projets pratiques depuis n'importe où.</p>
+                </div>
+            </div>
+            <div class="bg-white shadow-xl rounded-lg">
+                <button class="accordion-button p-6 w-full text-left">
+                    Quels sont les moyens de paiement ?
+                </button>
+                <div class="accordion-content p-6">
+                    <p>Nous acceptons plusieurs modes de paiement, y compris les cartes bancaires et les paiements par PayPal. Des facilités de paiement peuvent être proposées sur demande.</p>
+                </div>
+            </div>
+            <div class="bg-white shadow-xl rounded-lg">
+                <button class="accordion-button p-6 w-full text-left">
+                    Est-ce que je reçois un certificat à la fin de la formation ?
+                </button>
+                <div class="accordion-content p-6">
+                    <p>Oui, vous recevrez un certificat de fin de formation attestant de vos compétences acquises, ce qui peut être un atout dans votre recherche d'emploi ou pour faire évoluer votre carrière.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Inscription -->
+<section id="inscription" class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center">
+        <!-- Image à droite -->
+        <div class="lg:w-1/2 mb-8 lg:mb-0">
+            <img src="image1.png" alt="Formation" class="w-full rounded-lg shadow-lg">
+        </div>
+
+        <!-- Formulaire à gauche -->
+        <div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-xl">
+            <h2 class="text-4xl font-bold mb-6 text-center">Inscrivez-vous Maintenant</h2>
+            <form class="space-y-6">
+                <!-- Champ Nom -->
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700">Votre nom</label>
+                    <input type="text" id="name" placeholder="Votre nom" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 transition duration-200">
+                </div>
+                
+                <!-- Champ Email -->
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700">Votre email</label>
+                    <input type="email" id="email" placeholder="Votre email" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 transition duration-200">
+                </div>
+
+                <!-- Champ Message -->
+                <div>
+                    <label for="message" class="block text-lg font-medium text-gray-700">Message</label>
+                    <textarea id="message" placeholder="Votre message" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 transition duration-200" rows="4"></textarea>
+                </div>
+
+                <!-- Bouton d'envoi -->
+                <div>
+                    <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">S'inscrire</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+      
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-8 text-center">
+        <p class="text-lg font-semibold">© 2025 G2C - Coaching & Consulting</p>
+        <p>Contact : <a href="mailto:contact@g2c.com" class="text-blue-300">contact@g2c.com</a></p>
+    </footer>
+
+    <script>
+       
+        // Fonctionnalité d'accordéon avec animation fluide
+        const accButtons = document.querySelectorAll('.accordion-button');
+        accButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                
+                // Vérifier si la réponse est déjà ouverte
+                if (content.classList.contains('open')) {
+                    // Si ouverte, fermer
+                    content.classList.remove('open');
+                } else {
+                    // Fermer toutes les autres réponses
+                    document.querySelectorAll('.accordion-content').forEach(acc => {
+                        acc.classList.remove('open');
+                    });
+                    // Ouvrir la réponse sélectionnée
+                    content.classList.add('open');
+                }
+            });
+        });
+  
+
+        // Initialize AOS library for scroll animations
+        AOS.init();
+    </script>
 </body>
 </html>
