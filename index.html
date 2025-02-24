@@ -7,56 +7,129 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
-    
-    <!-- Navigation -->
-    <nav class="bg-blue-600 text-white p-5 fixed w-full top-0 shadow-lg">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">Formation DevOps</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#about" class="hover:underline">À propos</a></li>
-                <li><a href="#programme" class="hover:underline">Programme</a></li>
-                <li><a href="#temoignages" class="hover:underline">Témoignages</a></li>
-                <li><a href="#inscription" class="hover:underline">Inscription</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- Section Hero -->
     <section class="text-center py-32 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-        <h1 class="text-5xl font-bold animate-bounce">Maîtrisez DevOps en quelques semaines</h1>
+        <h1 class="text-5xl font-bold animate-pulse">Maîtrisez DevOps en quelques semaines</h1>
         <p class="mt-4 text-lg">Une formation complète pour comprendre CI/CD, Docker, Kubernetes et plus encore.</p>
         <a href="#inscription" class="mt-6 inline-block bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all">S'inscrire maintenant</a>
     </section>
     
     <!-- Section À propos -->
-    <section id="about" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg">
+    <section id="about" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
         <h2 class="text-3xl font-bold mb-4">Pourquoi suivre cette formation ?</h2>
-        <p class="text-gray-700">Le DevOps est une compétence essentielle dans le monde du développement moderne. Grâce à notre formation, vous apprendrez les outils et méthodologies les plus demandés.</p>
+        <p class="text-gray-700">DevOps est une compétence clé dans le développement moderne. Apprenez les outils et méthodologies les plus demandés.</p>
     </section>
     
-    <!-- Programme du cours -->
-    <section id="programme" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold mb-4">Programme de la formation</h2>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>✅ Introduction à DevOps</li>
-            <li>✅ Gestion du code source avec Git</li>
-            <li>✅ Intégration Continue (CI) et Déploiement Continu (CD)</li>
-            <li>✅ Conteneurisation avec Docker</li>
-            <li>✅ Orchestration avec Kubernetes</li>
-            <li>✅ Surveillance et observabilité</li>
-        </ul>
-    </section>
-    
-    <!-- Témoignages -->
-    <section id="temoignages" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold mb-4">Témoignages</h2>
-        <div class="bg-gray-100 p-4 rounded-lg shadow">
-            <p class="italic text-gray-700">"Une formation complète et enrichissante qui m'a permis d'obtenir mon premier job en DevOps !" - <strong>Alex B.</strong></p>
+    <!-- Programme du cours avec images des outils -->
+    <section id="programme" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Programme de la formation</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-blue-500 text-white rounded-lg shadow-xl hover:bg-blue-600 transform transition-all hover:scale-105">
+                <h3 class="text-2xl font-semibold">Introduction à DevOps</h3>
+                <button class="mt-4 px-6 py-3 bg-white text-blue-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('intro')">Voir les détails</button>
+                <p id="intro" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Apprenez les bases du DevOps et ses avantages dans le développement moderne.</p>
+            </div>
+            <div class="p-6 bg-green-500 text-white rounded-lg shadow-xl hover:bg-green-600 transform transition-all hover:scale-105">
+                <h3 class="text-2xl font-semibold">Gestion du code source avec Git</h3>
+                <button class="mt-4 px-6 py-3 bg-white text-green-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('git')">Voir les détails</button>
+                <p id="git" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Maîtrisez l'utilisation de Git pour gérer et versionner le code source.</p>
+            </div>
+            <div class="p-6 bg-orange-500 text-white rounded-lg shadow-xl hover:bg-orange-600 transform transition-all hover:scale-105">
+                <h3 class="text-2xl font-semibold">Intégration et Déploiement Continu avec Jenkins</h3>
+                <button class="mt-4 px-6 py-3 bg-white text-orange-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('jenkins')">Voir les détails</button>
+                <p id="jenkins" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Utilisez Jenkins pour l'intégration continue et le déploiement automatique des applications.</p>
+            </div>
+            <div class="p-6 bg-purple-500 text-white rounded-lg shadow-xl hover:bg-purple-600 transform transition-all hover:scale-105">
+                <h3 class="text-2xl font-semibold">Conteneurisation avec Docker</h3>
+                <button class="mt-4 px-6 py-3 bg-white text-purple-500 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('docker')">Voir les détails</button>
+                <p id="docker" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Comprenez comment Docker simplifie la gestion des applications et leur déploiement.</p>
+            </div>
+            <div class="p-6 bg-blue-700 text-white rounded-lg shadow-xl hover:bg-blue-800 transform transition-all hover:scale-105">
+                <h3 class="text-2xl font-semibold">Orchestration avec Kubernetes</h3>
+                <button class="mt-4 px-6 py-3 bg-white text-blue-700 rounded-lg font-semibold hover:bg-gray-200 transition-all" onclick="showDetails('kubernetes')">Voir les détails</button>
+                <p id="kubernetes" class="mt-2 text-gray-700 opacity-0 transition-opacity duration-500">Explorez Kubernetes pour automatiser la gestion des conteneurs dans des environnements complexes.</p>
+            </div>
         </div>
     </section>
     
+    <script>
+        function showDetails(id) {
+            const text = document.getElementById(id);
+            if (text.classList.contains('opacity-0')) {
+                text.classList.remove('opacity-0');
+                text.classList.add('opacity-100');
+            } else {
+                text.classList.remove('opacity-100');
+                text.classList.add('opacity-0');
+            }
+        }
+    </script>
+
+
+    
+    
+    <!-- Témoignages -->
+    <section id="temoignages" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
+        <h2 class="text-3xl font-bold mb-4">Témoignages</h2>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+            <p class="italic text-gray-700">"Une formation complète qui m'a permis de réussir dans mon nouveau job en DevOps !" - <strong>Alex B.</strong></p>
+        </div>
+    </section>
+    <section id="faq" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Questions fréquemment posées</h2>
+    
+        <div class="space-y-4">
+            <!-- Question 1 -->
+            <div class="border-b pb-4">
+                <button onclick="toggleAnswer('q1')" class="w-full text-left flex items-center justify-between text-xl font-semibold text-blue-600 border-l-4 pl-4">
+                    <span>Qu'est-ce que le DevOps ?</span>
+                    <span id="q1-symbol" class="text-2xl">+</span>
+                </button>
+                <p id="q1" class="text-gray-700 mt-2 opacity-0 transition-opacity duration-500">DevOps est une méthodologie qui combine développement logiciel et gestion des opérations pour accélérer la livraison et la mise en production d'applications.</p>
+            </div>
+    
+            <!-- Question 2 -->
+            <div class="border-b pb-4">
+                <button onclick="toggleAnswer('q2')" class="w-full text-left flex items-center justify-between text-xl font-semibold text-blue-600 border-l-4 pl-4">
+                    <span>Pourquoi utiliser Jenkins ?</span>
+                    <span id="q2-symbol" class="text-2xl">+</span>
+                </button>
+                <p id="q2" class="text-gray-700 mt-2 opacity-0 transition-opacity duration-500">Jenkins est utilisé pour l'intégration continue et le déploiement automatique, ce qui facilite la gestion du code source et des tests automatisés.</p>
+            </div>
+    
+            <!-- Question 3 -->
+            <div class="border-b pb-4">
+                <button onclick="toggleAnswer('q3')" class="w-full text-left flex items-center justify-between text-xl font-semibold text-blue-600 border-l-4 pl-4">
+                    <span>Qu'est-ce que Kubernetes ?</span>
+                    <span id="q3-symbol" class="text-2xl">+</span>
+                </button>
+                <p id="q3" class="text-gray-700 mt-2 opacity-0 transition-opacity duration-500">Kubernetes est un outil d'orchestration des conteneurs qui permet de gérer, déployer et mettre à l'échelle les applications conteneurisées.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const symbol = document.getElementById(id + '-symbol');
+            
+            if (answer.classList.contains('opacity-0')) {
+                answer.classList.remove('opacity-0');
+                answer.classList.add('opacity-100');
+                symbol.innerHTML = '-';  // Changer le signe "+" en "-"
+            } else {
+                answer.classList.remove('opacity-100');
+                answer.classList.add('opacity-0');
+                symbol.innerHTML = '+';  // Réinitialiser à "+"
+            }
+        }
+    </script>
+    
+    
+    
     <!-- Formulaire d'inscription -->
-    <section id="inscription" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg">
+    <section id="inscription" class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-xl rounded-lg">
         <h2 class="text-3xl font-bold mb-4">Inscrivez-vous maintenant</h2>
         <form class="space-y-4">
             <input type="text" placeholder="Votre nom" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
@@ -66,9 +139,46 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-600 text-white text-center p-5">
-        © 2024 Formation DevOps - Tous droits réservés
+    <footer class="bg-blue-600 text-white p-6">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <!-- Texte animé -->
+            <div class="text-center opacity-0 animate-fadeIn duration-1000 delay-300">
+                <p class="text-3xl font-bold">
+                    <span class="text-gray-400">G2C</span>
+                </p>
+                <p class="text-xl font-bold">
+                    <span class="text-blue-400">Coaching & Consulting</span>
+                </p>
+            </div>
+    
+            <!-- Contact Info -->
+            <div class="text-center opacity-0 animate-fadeIn duration-1000 delay-500">
+                <p class="font-semibold">Contactez-nous</p>
+                <p>Téléphone : +216 123 456 789</p>
+                <p>Email : contact@formationdevops.com</p>
+                <p>Adresse : 123 Rue de la Technologie, Tunis, Tunisie</p>
+            </div>
+        </div>
+    
+        <div class="text-center mt-4 opacity-0 animate-fadeIn duration-1000 delay-700">
+            <p>© 2024 Formation DevOps - Tous droits réservés</p>
+        </div>
     </footer>
+    
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>    
 
 </body>
 </html>
